@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="./styles/dark.css"/>
   </head>
   <body class="page">
-    <header class="header decorated-zone">
+    <header class="header">
+      <div class="decorated-zone" aria-hidden="true"></div>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -48,9 +49,9 @@
           <li class="section_list-item">
             <h3 class="subtitle">Многозадачность</h3>
             <p>Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная многозадачность, когда она так нужна вам 
-              (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи <a class="text_link" href="https://dana.org/article/multicosts-of-multitasking/">выяснили</a>,
-               что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — 
-              «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
+              (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи <a class="text_link" href="https://dana.org/article/multicosts-of-multitasking/" 
+              target="_blank" rel="noopener noreferrer">выяснили</a>, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, 
+              организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
           </li>
           <li class="section_list-item">
             <h3 class="subtitle">Дофамин</h3>
@@ -85,8 +86,8 @@
       </section>
       <section class="content_section section-how">
         <h2 class="section_title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
-        <h3 class="subtitle">5 простых (на самом деле не очень) советов</h3>
         <ul class="section_list section_list-how">
+          <li class="subtitle">5 простых (на самом деле не очень) советов</li>
           <li class="section_list-item">
             <h4 class="list-item_title">Представьте небо и облака</h4>
             <p>Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться. Ведь часто именно тревожные мысли о сложных задачах как раз и мешают эти сложные задачи делать. В такие 
@@ -100,9 +101,9 @@
           </li>
           <li class="section_list-item">
             <h4 class="list-item_title">Прогуляйтесь</h4>
-            <p>Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a class="text_link" href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328">показал</a>, что созерцание природы повышает 
-              концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше 
-              кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.</p>
+            <p>Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a class="text_link" href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" target="_blank" 
+              rel="noopener noreferrer">показал</a>, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку 
+              с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.</p>
           </li>
           <li class="section_list-item">
             <h4 class="list-item_title">Хорошо ешьте</h4>
@@ -119,11 +120,31 @@
       <section class="content_section">
         <h3 class="subtitle">А можно в картинках?</h3>
         <article class="collage">
-          <picture></picture>
-          <picture></picture>
-          <picture></picture>
-          <picture></picture>
-          <picture></picture>
+          <picture class="picture_sunset">
+            <source class="picture" srcset="./images/sunset.avif" type="image/avif">
+            <source class="picture" srcset="./images/sunset.webp" type="image/webp">
+            <img class="picture" loading="lazy" src="./images/sunset.png" alt="Изображение заката на фоне гор и моря в стиле аниме">
+          </picture>
+          <picture class="picture_ice-cream">
+            <source class="picture" srcset="./images/ice-cream.avif" type="image/avif">
+            <source class="picture" srcset="./images/ice-cream.webp" type="image/webp">
+            <img class="picture" loading="lazy" src="./images/ice-cream.png" alt="Изображение миски с шариками мороженого в стиле аниме">
+          </picture>
+          <picture class="picture_tape">
+            <source class="picture" srcset="./images/tape.avif" type="image/avif">
+            <source class="picture" srcset="./images/tape.webp" type="image/webp">
+            <img class="picture" loading="lazy" src="./images/tape.png" alt="Изображение аудиокассеты в окружении деталей интерфейса компьютера">
+          </picture>
+          <picture class="picture_books">
+            <source class="picture" srcset="./images/books.avif" type="image/avif">
+            <source class="picture" srcset="./images/books.webp" type="image/webp">
+            <img class="picture" loading="lazy" src="./images/books.png" alt="Изображение стопки книг, стоящей на полу">
+          </picture>
+          <picture class="picture_street">
+            <source class="picture" srcset="./images/street.avif" type="image/avif">
+            <source class="picture" srcset="./images/street.webp" type="image/webp">
+            <img class="picture" loading="lazy" src="./images/street.png" alt="Изображение вечерней улицы в стиле аниме">
+          </picture>
         </article>
       </section>
     </main>
