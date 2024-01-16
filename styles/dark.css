@@ -108,7 +108,7 @@
     --bg-color: #000028;
     --title-color: #DB00FF;
     --accent-color: #FF0070;
-    --shadow-color: #FF0070;    
+    --shadow-color: #FF0070;
   }
 
   .header {
@@ -119,7 +119,7 @@
   .footer::after {
     border-block-start: 1px solid var(--accent-color);
     border-inline-end: 1px solid var(--accent-color);
-}
+  }
 
   .header::before,
   .footer::before {
