@@ -9,6 +9,10 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.theme_dark {
   --text-color: #F1B2CE;
   --bg-color: #000028;
   --title-color: #DB00FF;
@@ -16,18 +20,12 @@
   --shadow-color: #FF0070;
 }
 
-.theme_dark .header {
-  background-image: url(../images/cover-image-dark.png);
-}
-
-.theme_dark .header::after,
-.theme_dark .footer::after {
+.theme_dark .decorated-zone::after {
   border-block-start: 1px solid var(--accent-color);
   border-inline-end: 1px solid var(--accent-color);
 }
 
-.theme_dark .header::before,
-.theme_dark .footer::before {
+.theme_dark .decorated-zone::before {
   border-block-end: 1px solid var(--accent-color);
   border-inline-start: 1px solid var(--accent-color);
 }
@@ -42,6 +40,10 @@
 
 .theme_dark .header__theme-menu-button:focus {
   border-block-end: 1px solid var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button:focus-visible {
+  outline: none;
 }
 
 .theme_dark  .header__theme-menu-button_active {
@@ -60,22 +62,23 @@
   color: var(--bg-color);
 }
 
-.theme_dark .decorated-zone {
+.theme_dark .secret_element {
   position: relative;
 }
 
-.theme_dark .decorated-zone::after {
-  content: 'REC';
+.theme_dark .secret_element::after {
+  content: 'rec';
+  text-transform: uppercase;
   font-weight: 400;
   line-height: 25px;
   color: var(--accent-color);
   position: absolute;
   z-index: 1;
-  top: 0px;
-  right: 30px;
+  top: 20px;
+  right: 50px;
 }
 
-.theme_dark .decorated-zone::before {
+.theme_dark .secret_element::before {
   content: '';
   inline-size: 11px;
   block-size: 11px;
@@ -84,23 +87,22 @@
   box-shadow: 0 0 10px 4px var(--shadow-color);
   position: absolute;
   z-index: 1;
-  top: 8px;
-  right: 8px;
+  top: 27px;
+  right: 28px;
 }
 
 @media (width < 768px) {
 
-  .theme_dark .decorated-zone::after {
+  .theme_dark .secret_element::after {
     top: 10px;
     right: 38px;
   }
   
-  .theme_dark .decorated-zone::before {
+  .theme_dark .secret_element::before {
     top: 18px;
     right: 18px;
   }
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -111,18 +113,16 @@
     --shadow-color: #FF0070;
   }
 
-  .header {
+  .page {
     background-image: url(../images/cover-image-dark.png);
   }
 
-  .header::after,
-  .footer::after {
+  .decorated-zone::after {
     border-block-start: 1px solid var(--accent-color);
     border-inline-end: 1px solid var(--accent-color);
   }
 
-  .header::before,
-  .footer::before {
+  .decorated-zone:before {
     border-block-end: 1px solid var(--accent-color);
     border-inline-start: 1px solid var(--accent-color);
   }
@@ -155,22 +155,23 @@
     color: var(--bg-color);
   }
 
-  .decorated-zone {
+  .secret_element {
     position: relative;
   }
 
-  .decorated-zone::after {
-    content: 'REC';
+  .secret_element::after {
+    content: 'rec';
+    text-transform: uppercase;
     font-weight: 400;
     line-height: 25px;
     color: var(--accent-color);
     position: absolute;
     z-index: 1;
-    top: 0px;
-    right: 30px;
+    top: 20px;
+    right: 50px;
   }
-
-  .decorated-zone::before {
+  
+  .secret_element::before {
     content: '';
     inline-size: 11px;
     block-size: 11px;
@@ -179,18 +180,18 @@
     box-shadow: 0 0 10px 4px var(--shadow-color);
     position: absolute;
     z-index: 1;
-    top: 8px;
-    right: 8px;
+    top: 27px;
+    right: 28px;
   }
 
   @media (width < 768px) {
 
-    .decorated-zone::after {
+    .secret_element::after {
       top: 10px;
       right: 38px;
     }
     
-    .decorated-zone::before {
+    .secret_element::before {
       top: 18px;
       right: 18px;
     }

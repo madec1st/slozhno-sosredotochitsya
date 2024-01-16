@@ -9,9 +9,112 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: url(../images/cover-image-light.png)
+}
+
+.theme_light {
   --text-color: #353430;
   --bg-color: #FFF1F7;
   --title-color: #FFC2E6;
   --accent-color: #FF8DCB;
   --shadow-color: #FF0070;
+}
+
+.theme_light .secret_element {
+  display: none;
+}
+
+.theme_light .secret_element::after,
+.theme_light .secret_element::before {
+  display: none;
+}
+
+.theme_light .decorated-zone::after {
+  border-block-start: 1px solid var(--text-color);
+  border-inline-end: 1px solid var(--text-color);
+}
+
+.theme_light .decorated-zone:before {
+  border-block-end: 1px solid var(--text-color);
+  border-inline-start: 1px solid var(--text-color);
+}
+
+.theme_light .header__theme-menu-button {
+  color: var(--text-color);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  border: 1px solid rgba(50, 49, 45, 0.40);
+}
+
+.theme_light .header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--text-color);
+}
+
+.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--text-color);
+}
+
+.theme_light .subtitle {
+  color: var(--text-color);
+}
+
+.theme_light .section_title {
+  color: var(--text-color);
+}
+
+.theme_light .list-item_title {
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #353430;
+    --bg-color: #FFF1F7;
+    --title-color: #FFC2E6;
+    --accent-color: #FF8DCB;
+    --shadow-color: #FF0070;
+  }
+
+  .page {
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .decorated-zone::after {
+    border-block-start: 1px solid var(--text-color);
+    border-inline-end: 1px solid var(--text-color);
+  }
+
+  .decorated-zone:before {
+    border-block-end: 1px solid var(--text-color);
+    border-inline-start: 1px solid var(--text-color);
+  }
+
+  .header__theme-menu-button {
+    color: var(--text-color);
+  }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(50, 49, 45, 0.40);
+  }
+
+  .header__theme-menu-button:focus {
+    border-block-end: 1px solid var(--text-color);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--text-color);
+  }
+
+  .subtitle {
+    color: var(--text-color);
+  }
+
+  .section_title {
+    color: var(--text-color);
+  }
+
+  .list-item_title {
+    color: var(--text-color);
+  }
 }
