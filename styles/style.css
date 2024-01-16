@@ -29,7 +29,7 @@
   max-block-size: 100vh;
   margin-block-end: 60px;
   display: grid;
-  grid-template-rows: repeat(3, 1fr)
+  grid-template-rows: 1fr min-content 1fr;
 }
 
 .decorated-zone {
@@ -67,7 +67,7 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 25px;
 }
 
 .header__theme-menu-button {
@@ -259,8 +259,6 @@
 
   .header {
     min-block-size: 1024px;
-    display: grid;
-    grid-template-rows: calc(180px * 2 + 95px) 1fr 1fr;
   }
   
   .header__theme-menu {
@@ -282,7 +280,7 @@
   }
 
   .header_subtitle {
-    place-self: start end;
+    place-self: center end;
   }
 
   .section-why_how {
