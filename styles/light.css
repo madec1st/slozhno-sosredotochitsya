@@ -19,3 +19,17 @@
 .theme_light .secret_element::before {
   display: none;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #353430;
+    --title-color: #FFC2E6;
+    --subtitle-color: #353430;
+    --section-title: #353430;
+    --accent-color: #FF8DCB;
+    --shadow-color: #FF0070;
+    --button-color: #353430;
+    --decor-color: #353430;
+    --bg-image: url(../images/cover-image-light.png);
+  }
+}

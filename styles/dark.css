@@ -52,3 +52,59 @@
     right: 18px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #F1B2CE;
+    --title-color: #DB00FF;
+    --subtitle-color: #000028;
+    --section-title: #FF0070;
+    --accent-color: #FF0070;
+    --shadow-color: #FF0070;
+    --button-color: #FF0070;
+    --decor-color: #FF0070;
+    --bg-image: url(../images/cover-image-dark.png);
+  }
+
+  .secret_element {
+    position: relative;
+  }
+  
+  .secret_element::after {
+    content: 'rec';
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--accent-color);
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 50px;
+  }
+  
+  .secret_element::before {
+    content: '';
+    inline-size: 9px;
+    block-size: 9px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 4px 2px var(--shadow-color);
+    position: absolute;
+    z-index: 1;
+    top: 28px;
+    right: 28px;
+  }
+
+  @media (width < 768px) {
+
+    .secret_element::after {
+      top: 10px;
+      right: 38px;
+    }
+    
+    .secret_element::before {
+      top: 18px;
+      right: 18px;
+    }
+  }
+}
