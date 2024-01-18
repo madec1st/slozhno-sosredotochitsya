@@ -18,7 +18,7 @@
   margin: 0 auto;
   padding: 20px;
   max-inline-size: 1440px;
-  block-size: 100vh;
+  block-size: max(668px, 100vh);
   margin-block-end: 60px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
@@ -210,7 +210,7 @@
   align-items: stretch;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 20px; /*в макете на 1024х768 разные отступы между ячейками, идеально выровнить не получится*/
+  gap: 20px;
   aspect-ratio: 1 / 1;
 }
 
@@ -248,7 +248,7 @@
 
 .footer {
   max-inline-size: 1440px;
-  block-size: 100vh;
+  block-size: max(668px, 100vh);
   padding: 20px;
   display: flex;
   align-items: center;
